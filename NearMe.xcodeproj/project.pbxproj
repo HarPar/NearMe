@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E65492541E655E8F0033B944 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E65492531E655E8F0033B944 /* main.m */; };
+		E65492571E655E8F0033B944 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E65492561E655E8F0033B944 /* AppDelegate.m */; };
+		E654925A1E655E8F0033B944 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E65492591E655E8F0033B944 /* ViewController.m */; };
+		E654925D1E655E8F0033B944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E654925B1E655E8F0033B944 /* Main.storyboard */; };
+		E65492601E655E8F0033B944 /* NearMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E654925E1E655E8F0033B944 /* NearMe.xcdatamodeld */; };
+		E65492621E655E8F0033B944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65492611E655E8F0033B944 /* Assets.xcassets */; };
+		E65492651E655E8F0033B944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65492631E655E8F0033B944 /* LaunchScreen.storyboard */; };
+		E65492701E655E8F0033B944 /* NearMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E654926F1E655E8F0033B944 /* NearMeTests.m */; };
+		E654927B1E655E8F0033B944 /* NearMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E654927A1E655E8F0033B944 /* NearMeUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E654926C1E655E8F0033B944 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E65492471E655E8E0033B944 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E654924E1E655E8F0033B944;
+			remoteInfo = NearMe;
+		};
+		E65492771E655E8F0033B944 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E65492471E655E8E0033B944 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E654924E1E655E8F0033B944;
+			remoteInfo = NearMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E654924F1E655E8F0033B944 /* NearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65492531E655E8F0033B944 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E65492551E655E8F0033B944 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E65492561E655E8F0033B944 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E65492581E655E8F0033B944 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E65492591E655E8F0033B944 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E654925C1E655E8F0033B944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E654925F1E655E8F0033B944 /* NearMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NearMe.xcdatamodel; sourceTree = "<group>"; };
+		E65492611E655E8F0033B944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E65492641E655E8F0033B944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E65492661E655E8F0033B944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E654926B1E655E8F0033B944 /* NearMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E654926F1E655E8F0033B944 /* NearMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearMeTests.m; sourceTree = "<group>"; };
+		E65492711E655E8F0033B944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E65492761E655E8F0033B944 /* NearMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E654927A1E655E8F0033B944 /* NearMeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearMeUITests.m; sourceTree = "<group>"; };
+		E654927C1E655E8F0033B944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E654924C1E655E8F0033B944 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65492681E655E8F0033B944 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65492731E655E8F0033B944 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E65492461E655E8E0033B944 = {
+			isa = PBXGroup;
+			children = (
+				E65492511E655E8F0033B944 /* NearMe */,
+				E654926E1E655E8F0033B944 /* NearMeTests */,
+				E65492791E655E8F0033B944 /* NearMeUITests */,
+				E65492501E655E8F0033B944 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E65492501E655E8F0033B944 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E654924F1E655E8F0033B944 /* NearMe.app */,
+				E654926B1E655E8F0033B944 /* NearMeTests.xctest */,
+				E65492761E655E8F0033B944 /* NearMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E65492511E655E8F0033B944 /* NearMe */ = {
+			isa = PBXGroup;
+			children = (
+				E65492551E655E8F0033B944 /* AppDelegate.h */,
+				E65492561E655E8F0033B944 /* AppDelegate.m */,
+				E65492581E655E8F0033B944 /* ViewController.h */,
+				E65492591E655E8F0033B944 /* ViewController.m */,
+				E654925B1E655E8F0033B944 /* Main.storyboard */,
+				E65492611E655E8F0033B944 /* Assets.xcassets */,
+				E65492631E655E8F0033B944 /* LaunchScreen.storyboard */,
+				E65492661E655E8F0033B944 /* Info.plist */,
+				E654925E1E655E8F0033B944 /* NearMe.xcdatamodeld */,
+				E65492521E655E8F0033B944 /* Supporting Files */,
+			);
+			path = NearMe;
+			sourceTree = "<group>";
+		};
+		E65492521E655E8F0033B944 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E65492531E655E8F0033B944 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E654926E1E655E8F0033B944 /* NearMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				E654926F1E655E8F0033B944 /* NearMeTests.m */,
+				E65492711E655E8F0033B944 /* Info.plist */,
+			);
+			path = NearMeTests;
+			sourceTree = "<group>";
+		};
+		E65492791E655E8F0033B944 /* NearMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E654927A1E655E8F0033B944 /* NearMeUITests.m */,
+				E654927C1E655E8F0033B944 /* Info.plist */,
+			);
+			path = NearMeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E654924E1E655E8F0033B944 /* NearMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E654927F1E655E8F0033B944 /* Build configuration list for PBXNativeTarget "NearMe" */;
+			buildPhases = (
+				E654924B1E655E8F0033B944 /* Sources */,
+				E654924C1E655E8F0033B944 /* Frameworks */,
+				E654924D1E655E8F0033B944 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NearMe;
+			productName = NearMe;
+			productReference = E654924F1E655E8F0033B944 /* NearMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E654926A1E655E8F0033B944 /* NearMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E65492821E655E8F0033B944 /* Build configuration list for PBXNativeTarget "NearMeTests" */;
+			buildPhases = (
+				E65492671E655E8F0033B944 /* Sources */,
+				E65492681E655E8F0033B944 /* Frameworks */,
+				E65492691E655E8F0033B944 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E654926D1E655E8F0033B944 /* PBXTargetDependency */,
+			);
+			name = NearMeTests;
+			productName = NearMeTests;
+			productReference = E654926B1E655E8F0033B944 /* NearMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E65492751E655E8F0033B944 /* NearMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E65492851E655E8F0033B944 /* Build configuration list for PBXNativeTarget "NearMeUITests" */;
+			buildPhases = (
+				E65492721E655E8F0033B944 /* Sources */,
+				E65492731E655E8F0033B944 /* Frameworks */,
+				E65492741E655E8F0033B944 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E65492781E655E8F0033B944 /* PBXTargetDependency */,
+			);
+			name = NearMeUITests;
+			productName = NearMeUITests;
+			productReference = E65492761E655E8F0033B944 /* NearMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E65492471E655E8E0033B944 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Harshil Parikh";
+				TargetAttributes = {
+					E654924E1E655E8F0033B944 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DT26ZQ8CEK;
+						ProvisioningStyle = Automatic;
+					};
+					E654926A1E655E8F0033B944 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DT26ZQ8CEK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E654924E1E655E8F0033B944;
+					};
+					E65492751E655E8F0033B944 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DT26ZQ8CEK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E654924E1E655E8F0033B944;
+					};
+				};
+			};
+			buildConfigurationList = E654924A1E655E8E0033B944 /* Build configuration list for PBXProject "NearMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E65492461E655E8E0033B944;
+			productRefGroup = E65492501E655E8F0033B944 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E654924E1E655E8F0033B944 /* NearMe */,
+				E654926A1E655E8F0033B944 /* NearMeTests */,
+				E65492751E655E8F0033B944 /* NearMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E654924D1E655E8F0033B944 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E65492651E655E8F0033B944 /* LaunchScreen.storyboard in Resources */,
+				E65492621E655E8F0033B944 /* Assets.xcassets in Resources */,
+				E654925D1E655E8F0033B944 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65492691E655E8F0033B944 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65492741E655E8F0033B944 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E654924B1E655E8F0033B944 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E654925A1E655E8F0033B944 /* ViewController.m in Sources */,
+				E65492571E655E8F0033B944 /* AppDelegate.m in Sources */,
+				E65492541E655E8F0033B944 /* main.m in Sources */,
+				E65492601E655E8F0033B944 /* NearMe.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65492671E655E8F0033B944 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E65492701E655E8F0033B944 /* NearMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E65492721E655E8F0033B944 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E654927B1E655E8F0033B944 /* NearMeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E654926D1E655E8F0033B944 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E654924E1E655E8F0033B944 /* NearMe */;
+			targetProxy = E654926C1E655E8F0033B944 /* PBXContainerItemProxy */;
+		};
+		E65492781E655E8F0033B944 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E654924E1E655E8F0033B944 /* NearMe */;
+			targetProxy = E65492771E655E8F0033B944 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E654925B1E655E8F0033B944 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E654925C1E655E8F0033B944 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E65492631E655E8F0033B944 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E65492641E655E8F0033B944 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E654927D1E655E8F0033B944 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E654927E1E655E8F0033B944 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E65492801E655E8F0033B944 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DT26ZQ8CEK;
+				INFOPLIST_FILE = NearMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harpar.gotit.NearMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E65492811E655E8F0033B944 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DT26ZQ8CEK;
+				INFOPLIST_FILE = NearMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harpar.gotit.NearMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E65492831E655E8F0033B944 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DT26ZQ8CEK;
+				INFOPLIST_FILE = NearMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harpar.gotit.NearMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearMe.app/NearMe";
+			};
+			name = Debug;
+		};
+		E65492841E655E8F0033B944 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = DT26ZQ8CEK;
+				INFOPLIST_FILE = NearMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harpar.gotit.NearMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearMe.app/NearMe";
+			};
+			name = Release;
+		};
+		E65492861E655E8F0033B944 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DT26ZQ8CEK;
+				INFOPLIST_FILE = NearMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harpar.gotit.NearMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NearMe;
+			};
+			name = Debug;
+		};
+		E65492871E655E8F0033B944 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DT26ZQ8CEK;
+				INFOPLIST_FILE = NearMeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.harpar.gotit.NearMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NearMe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E654924A1E655E8E0033B944 /* Build configuration list for PBXProject "NearMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E654927D1E655E8F0033B944 /* Debug */,
+				E654927E1E655E8F0033B944 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E654927F1E655E8F0033B944 /* Build configuration list for PBXNativeTarget "NearMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E65492801E655E8F0033B944 /* Debug */,
+				E65492811E655E8F0033B944 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E65492821E655E8F0033B944 /* Build configuration list for PBXNativeTarget "NearMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E65492831E655E8F0033B944 /* Debug */,
+				E65492841E655E8F0033B944 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E65492851E655E8F0033B944 /* Build configuration list for PBXNativeTarget "NearMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E65492861E655E8F0033B944 /* Debug */,
+				E65492871E655E8F0033B944 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E654925E1E655E8F0033B944 /* NearMe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E654925F1E655E8F0033B944 /* NearMe.xcdatamodel */,
+			);
+			currentVersion = E654925F1E655E8F0033B944 /* NearMe.xcdatamodel */;
+			path = NearMe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E65492471E655E8E0033B944 /* Project object */;
+}
