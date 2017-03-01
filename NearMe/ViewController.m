@@ -22,6 +22,7 @@ double latitude, longitude, rad;
 long int cellNumber;
 NSString *apiKey;
 
+
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
@@ -54,9 +55,6 @@ NSString *apiKey;
 // Checking when cell is clicked
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // If you need to use the touched cell, you can retrieve it like so
-    //UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-    
     cellNumber = indexPath.row;
     
     // Disable collection view and update button
@@ -69,6 +67,7 @@ NSString *apiKey;
 
 
 -(void)updateMap{
+    
     // Setting up a Pin
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     CLLocationCoordinate2D pinLocation;
@@ -90,7 +89,6 @@ NSString *apiKey;
     region.center = pinLocation;
     _maps.layer.zPosition = 1;
     _directionsButton.layer.zPosition = 1;
-    _toolbar.layer.zPosition = 1;
     [_maps setRegion:region animated:YES];
     [_maps selectAnnotation:annotation animated:YES];
     
@@ -109,15 +107,22 @@ NSString *apiKey;
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
     
-    
     return responseData;
 }
 
 
-// Update the Current Location
+// Should an error when getting the location
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+
+// Update the longitude and latitude
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    //NSLog(@"didUpdateToLocation: %@", newLocation);
     CLLocation *currentLocation = newLocation;
     
     if (currentLocation != nil) {
@@ -129,24 +134,10 @@ NSString *apiKey;
 // Get the URL String needed for the pictures
 -(NSString *)getURL
 {
-    
+    // Base URL for Google Places API use
     NSString *baseURL = @"https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
     
-    // Getting User Latitude and Longitude
-    locationManager = [[CLLocationManager alloc]init];
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [locationManager startUpdatingLocation];  //requesting location updates
-    
-    latitude = locationManager.location.coordinate.latitude;
-    longitude = locationManager.location.coordinate.longitude;
-        
-    // FOR SIMULATOR (DELETE)
-    //latitude = 37.577870;
-    //longitude = -122.348090;
-    
-    
-    
+    // Formatting the URL to get JSON Data
     baseURL = [NSString stringWithFormat:@"%@location=%f,%f&radius=%f&key=%@", baseURL, latitude, longitude, rad, apiKey];
     
     return baseURL;
@@ -162,7 +153,9 @@ NSString *apiKey;
     responseDict=[NSJSONSerialization JSONObjectWithData:picturesData options:NSJSONReadingMutableLeaves error:&error];
     
     NSMutableArray *results, *photoReference;
+    photoReference = [[NSMutableArray alloc] init];
     NSString *baseURL = @"https://maps.googleapis.com/maps/api/place/photo?";
+    
     
     // Getting the various places 'results' from JSON  data
     for (id response in responseDict){
@@ -171,11 +164,8 @@ NSString *apiKey;
         }
     }
     
-    
-    
-    // Creating an of location names
+    // Creating an array of location names
     locationNames = [results valueForKey:@"name"];
-    
     
     // Creating an array of locations
     latitudes = [[[results valueForKey:@"geometry"] valueForKey:@"location"] valueForKey:@"lat"];
@@ -197,24 +187,36 @@ NSString *apiKey;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSLog(@"IN");
     
     NSData *picData;
     NSString *picURL;
     
+    
     images = [[NSMutableArray alloc]init];
     
     // API KEY
-    apiKey = @"AIzaSyDKaqCNdL46fYzh_PeVx97vII0pjUpGro0";
+    apiKey = @"AIzaSyAcD3-IOLAKUKd_mpRN69Zmu6ULy52u8eQ";
     
     
+    // Update radius
     if ([_updateRad doubleValue] > 0){
         rad = [_updateRad doubleValue];
     } else{
         rad = 10000;
     }
     
-    ///NSLog(@"%f", rad);
+    
+    // Getting User Latitude and Longitude
+    locationManager = [[CLLocationManager alloc]init];
+    locationManager.delegate = self;
+    [locationManager requestWhenInUseAuthorization];
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+    
+    CLLocation * currentLocation = [locationManager location];
+    
+    latitude = currentLocation.coordinate.latitude;
+    longitude = currentLocation.coordinate.longitude;
     
     // Getting Images into images array
     picURL = [self getURL];
@@ -223,18 +225,6 @@ NSString *apiKey;
     
     // Show users location
     _maps.showsUserLocation = YES;
-    
-    
-    MKUserTrackingBarButtonItem *trackingButton = [[MKUserTrackingBarButtonItem alloc] initWithMapView:_maps];
-    NSMutableArray *items = [[NSMutableArray alloc] initWithArray:_toolbar.items];
-    [items insertObject:trackingButton atIndex:0];
-    [_toolbar setItems:items];
-    [_toolbar setBackgroundImage:[UIImage new]
-                  forToolbarPosition:UIToolbarPositionAny
-                          barMetrics:UIBarMetricsDefault];
-    
-    //[_toolbar setBackgroundColor:[UIColor clearColor]];
-    
     
     
     // CollectionView Properties
@@ -265,9 +255,9 @@ NSString *apiKey;
         // Update Button
         [_settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
     } else{
-        SettingController *sController = [[SettingController alloc] init];
-                
-        [self presentViewController:sController animated:YES completion:^(void){}];
+        
+        // Perform segue with SettingController
+        [self performSegueWithIdentifier:@"launchSettings" sender:self];
     }
 }
 
@@ -276,7 +266,6 @@ NSString *apiKey;
     // Sends a request to Apple Maps to show directions
     NSString* directionsURL = [NSString stringWithFormat:@"http://maps.apple.com/?saddr=%f,%f&daddr=%f,%f", latitude, longitude, [latitudes[cellNumber] doubleValue], [longitudes[cellNumber] doubleValue]];
     [[UIApplication sharedApplication] openURL: [NSURL URLWithString: directionsURL] options:@{} completionHandler:^(BOOL success){
-        
         //CAN do something when successfully found directions
     }];
     
@@ -287,6 +276,8 @@ NSString *apiKey;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // Pass the rad to SettingController
     SettingController *destViewController = segue.destinationViewController;
     destViewController.rad = [NSNumber numberWithDouble:rad];
     

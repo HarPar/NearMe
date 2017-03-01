@@ -22,16 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r82-No-JVW">
-                                <rect key="frame" x="-10" y="500" width="60" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="uaz-6v-vr1"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem id="RF7-TD-Sal"/>
-                                </items>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZPM-d0-NDF">
                                 <rect key="frame" x="0.0" y="20" width="375" height="585"/>
                             </mapView>
@@ -100,14 +90,12 @@
                                 </state>
                                 <connections>
                                     <action selector="naviButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h4f-4o-drM"/>
-                                    <segue destination="4QQ-Nf-OWd" kind="show" id="cSu-IM-ZQe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kds-5G-kF7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-1" id="87d-D8-vJB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="r82-No-JVW" secondAttribute="trailing" constant="309" id="Ag6-yr-BGq"/>
                             <constraint firstItem="ZPM-d0-NDF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="C5L-Eg-hOs"/>
                             <constraint firstItem="mmt-Ed-cfp" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="CfP-dB-OBO"/>
                             <constraint firstItem="ZPM-d0-NDF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DZN-EL-azo"/>
@@ -115,7 +103,6 @@
                             <constraint firstItem="WKJ-8y-xO3" firstAttribute="trailing" secondItem="ZPM-d0-NDF" secondAttribute="trailing" id="P1h-bc-Aym"/>
                             <constraint firstItem="WKJ-8y-xO3" firstAttribute="leading" secondItem="mmt-Ed-cfp" secondAttribute="leading" id="RSF-UH-UrO"/>
                             <constraint firstItem="WKJ-8y-xO3" firstAttribute="trailing" secondItem="mmt-Ed-cfp" secondAttribute="trailing" id="SPP-2s-Nqt"/>
-                            <constraint firstItem="r82-No-JVW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="480" id="VoU-14-C2E"/>
                             <constraint firstItem="WKJ-8y-xO3" firstAttribute="top" secondItem="ZPM-d0-NDF" secondAttribute="top" id="WIE-Yx-L58"/>
                             <constraint firstItem="ZPM-d0-NDF" firstAttribute="bottom" secondItem="WKJ-8y-xO3" secondAttribute="bottom" id="g4C-W8-ZWA"/>
                             <constraint firstItem="kds-5G-kF7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gYM-cG-A0H"/>
@@ -128,7 +115,7 @@
                         <outlet property="directionsButton" destination="kds-5G-kF7" id="KMv-hF-nJg"/>
                         <outlet property="maps" destination="ZPM-d0-NDF" id="w8L-ZK-6fB"/>
                         <outlet property="settingsButton" destination="mmt-Ed-cfp" id="akw-8R-KHB"/>
-                        <outlet property="toolbar" destination="r82-No-JVW" id="Kd3-fq-BW6"/>
+                        <segue destination="4QQ-Nf-OWd" kind="show" identifier="launchSettings" id="lPw-5e-PPx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

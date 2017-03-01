@@ -25,7 +25,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *settingsButton;
 @property (weak, nonatomic) IBOutlet UIButton *directionsButton;
 
-@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
-
 @end
 

@@ -26,8 +26,10 @@ double maxDist;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Max Radius
     maxDist = 50000;
     
+    // Set the value of slider and string for label
     [_distanceSlider setValue:[rad doubleValue]/maxDist animated: NO];
     _distanceLabel.text = [NSString stringWithFormat:@"%.01fkm", [rad doubleValue]/1000];
 }
@@ -41,12 +43,15 @@ double maxDist;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // Pass rad back to ViewController
     ViewController *destViewController = segue.destinationViewController;
     destViewController.updateRad = rad;
 }
 
 
 - (IBAction)distanceSliderMoved:(id)sender {
+    // When slider is moved updated rad and label
     rad = [NSNumber numberWithDouble: _distanceSlider.value * maxDist];
     _distanceLabel.text = [NSString stringWithFormat:@"%.01fkm", [rad doubleValue]/1000];
 }
