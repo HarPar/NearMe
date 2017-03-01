@@ -7,9 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate>{
+    NSMutableArray *images, *latitudes, *longitudes, *locationNames;
+    CLLocationManager *locationManager;
+    
+}
+
+- (IBAction)naviButton:(id)sender;
+- (IBAction)getDirections:(id)sender;
+@property (nonatomic, strong) NSNumber *updateRad;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet MKMapView *maps;
+@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
+@property (weak, nonatomic) IBOutlet UIButton *directionsButton;
+
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
 
